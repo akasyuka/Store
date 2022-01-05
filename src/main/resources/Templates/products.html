@@ -8,8 +8,10 @@
 <body>
     <header th:insert="blocks/header :: header"></header>
     <main>
-        <div style="margin:25px 100px 25px; background-color: #EBEBEB;">
-            <p>Категории</p>
+        <div th:each="el : ${goods}">
+            <h3 th:text="${el.name}"/>
+            <p th:text="${el.about}"/>
+            <a th:href="'/details/' + ${el.id}">Детальнее</a>
         </div>
     </main>
     <footer th:insert="blocks/footer :: footer"></footer>

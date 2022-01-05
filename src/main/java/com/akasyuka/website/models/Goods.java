@@ -13,8 +13,8 @@ public class Goods {
     private Long id;
 
     private String name, about;
-    private float price;
-    private int views;
+    private Float price;
+    private Integer views;
 
     public Long getId() {
         return id;

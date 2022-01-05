@@ -19,10 +19,4 @@ public class MainController {
         return "about";
     }
 
-    @GetMapping("/products")
-    public String products (Model model) {
-        model.addAttribute("title", "Главная");
-        return "products";
-    }
-
 }
