@@ -15,7 +15,7 @@ public class ProductsController {
 
     @GetMapping("/products")
     public String products (Model model) {
-        model.addAttribute("title", "Главная");
+        model.addAttribute("title", "Главная ");
         Iterable<Goods> allGoods = goodsRepository.findAll();
         model.addAttribute("goods", allGoods);
         return "products";
