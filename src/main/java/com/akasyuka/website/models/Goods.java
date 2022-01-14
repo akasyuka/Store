@@ -14,7 +14,16 @@ public class Goods {
 
     private String name, about;
     private Float price;
-    private Integer views;
+//    private int views;
+
+    public Goods(String name, String about, Float price) {
+        this.name = name;
+        this.about = about;
+        this.price = price;
+    }
+
+    public Goods() {
+    }
 
     public Long getId() {
         return id;
@@ -46,13 +55,5 @@ public class Goods {
 
     public void setPrice(float price) {
         this.price = price;
-    }
-
-    public int getViews() {
-        return views;
-    }
-
-    public void setViews(int views) {
-        this.views = views;
     }
 }

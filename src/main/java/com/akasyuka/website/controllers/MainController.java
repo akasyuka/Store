@@ -1,8 +1,12 @@
 package com.akasyuka.website.controllers;
 
+import com.akasyuka.website.models.Goods;
+import com.akasyuka.website.repo.GoodsRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
@@ -18,11 +22,4 @@ public class MainController {
         model.addAttribute("title", "Главная ");
         return "about";
     }
-
-    @GetMapping("/add")
-    public String add (Model model) {
-        model.addAttribute("title", "Главная ");
-        return "add";
-    }
-
 }
