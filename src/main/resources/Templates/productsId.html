@@ -8,11 +8,15 @@
 <body>
 <header th:insert="blocks/header :: header"></header>
 <main>
-  <div th:each="el : ${goods}">
-    <h3 th:text="${el.name}"/>
-    <p th:text="${el.about}"/>
-    <a th:href="'/products/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a>
-    <a th:href="'/products/' + ${el.id} + '/remove'" class="btn btn-warning">Удалить</a>
+  <div style="margin:25px 100px 25px; background-color: #EBEBEB;">
+    <div th:each="el : ${goods}">
+      <h3 th:text="${el.name}"/>
+      <p th:text="${el.about}"/>
+      <a th:href="'/products/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a>
+      <form th:action="'/products/' + ${el.id} + '/remove'" method="post">
+        <button class="btn btn-warning" type="submit">Удалить</button>
+      </form>
+    </div>
   </div>
 </main>
 <footer th:insert="blocks/footer :: footer"></footer>

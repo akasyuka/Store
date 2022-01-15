@@ -41,12 +41,38 @@ public class ProductsController {
     }
 
     @GetMapping("/products/{id}")
-    public String productDetails (@PathVariable(value = "id") long id, Model model) {
+    public String productId (@PathVariable(value = "id") long id, Model model) {
         Optional<Goods> goods = goodsRepository.findById(id);
         ArrayList<Goods> res = new ArrayList<>();
         goods.ifPresent(res::add);
         model.addAttribute("goods", res);
         return "productsId";
+    }
+
+    @GetMapping("/products/{id}/edit")
+    public String productIdEdit (@PathVariable(value = "id") long id, Model model) {
+        Optional<Goods> goods = goodsRepository.findById(id);
+        ArrayList<Goods> res = new ArrayList<>();
+        goods.ifPresent(res::add);
+        model.addAttribute("goods", res);
+        return "productsIdEdit";
+    }
+
+    @PostMapping("/products/{id}/edit")
+    public String postEdit (@PathVariable(value = "id") long id, @RequestParam String place1, @RequestParam String place2, @RequestParam Float place3, Model model) {
+        Goods post = goodsRepository.findById(id).orElseThrow();
+        post.setName(place1);
+        post.setAbout(place2);
+        post.setPrice(place3);
+        goodsRepository.save(post);
+        return "redirect:/products";
+    }
+
+    @PostMapping("/products/{id}/remove")
+    public String postRemove (@PathVariable(value = "id") long id, Model model) {
+        Goods post = goodsRepository.findById(id).orElseThrow();
+        goodsRepository.delete(post);
+        return "redirect:/products";
     }
 
 }
