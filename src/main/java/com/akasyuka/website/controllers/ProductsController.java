@@ -1,7 +1,7 @@
 package com.akasyuka.website.controllers;
 
 import com.akasyuka.website.models.Goods;
-import com.akasyuka.website.repo.GoodsRepository;
+import com.akasyuka.website.repositories.GoodsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

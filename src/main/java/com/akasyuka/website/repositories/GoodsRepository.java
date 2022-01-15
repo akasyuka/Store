@@ -1,4 +1,4 @@
-package com.akasyuka.website.repo;
+package com.akasyuka.website.repositories;
 
 import com.akasyuka.website.models.Goods;
 import org.springframework.data.repository.CrudRepository;
