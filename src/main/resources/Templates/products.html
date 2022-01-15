@@ -12,7 +12,7 @@
             <div th:each="el : ${goods}">
                 <h3 th:text="${el.name}"/>
                 <p th:text="${el.about}"/>
-                <a th:href="'/details/' + ${el.id}">Детальнее</a>
+                <a th:href="'/products/' + ${el.id}" class="btn btn-warning">Детальнее</a>
             </div>
         </div>
     </main>
