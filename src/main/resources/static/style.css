@@ -1,4 +1,7 @@
 .home {
     margin:25px 100px 25px;
-    background-color: #EBEBEB;
+    background-color:#EBEBEB;
+}
+.clearfix {
+    clear: both;
 }
