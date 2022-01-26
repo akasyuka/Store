@@ -13,7 +13,7 @@
             <div th:each="el : ${goods}">
                 <h3 th:text="${el.name}"/>
                 <p th:text="${el.about}"/>
-                <a th:href="'/products/' + ${el.id}" class="btn btn-warning">Детальнее</a>
+                <a th:href="'/products/' + ${el.id}" class="btn btn-info">Детальнее</a>
                 <img th:src="@{img/img1.jpg}" alt=""/>
             </div>
 
