@@ -27,19 +27,6 @@ public class ProductsController {
         return "products";
     }
 
-    @GetMapping("/add")
-    public String add (Model model) {
-        model.addAttribute("title", "Главная ");
-        return "add";
-    }
-
-    @PostMapping("/add")
-    public String postAdd (@RequestParam String place1, @RequestParam String place2, @RequestParam Float place3, Model model) {
-        Goods post = new Goods(place1, place2, place3);
-        goodsRepository.save(post);
-        return "redirect:/products";
-    }
-
     @GetMapping("/products/{id}")
     public String productId (@PathVariable(value = "id") long id, Model model) {
         Optional<Goods> goods = goodsRepository.findById(id);
