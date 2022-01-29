@@ -19,7 +19,7 @@ public class ProductsController {
     @Autowired
     private GoodsRepository goodsRepository;
 
-    @GetMapping("/products")
+    @GetMapping("/")
     public String products (Model model) {
         model.addAttribute("title", "Главная ");
         Iterable<Goods> allGoods = goodsRepository.findAll();
@@ -27,7 +27,7 @@ public class ProductsController {
         return "products";
     }
 
-    @GetMapping("/products/{id}")
+    @GetMapping("/{id}")
     public String productId (@PathVariable(value = "id") long id, Model model) {
         Optional<Goods> goods = goodsRepository.findById(id);
         ArrayList<Goods> res = new ArrayList<>();
@@ -36,7 +36,7 @@ public class ProductsController {
         return "productsId";
     }
 
-    @GetMapping("/products/{id}/edit")
+    @GetMapping("/{id}/edit")
     public String productIdEdit (@PathVariable(value = "id") long id, Model model) {
         Optional<Goods> goods = goodsRepository.findById(id);
         ArrayList<Goods> res = new ArrayList<>();
@@ -45,21 +45,21 @@ public class ProductsController {
         return "productsIdEdit";
     }
 
-    @PostMapping("/products/{id}/edit")
+    @PostMapping("/{id}/edit")
     public String postEdit (@PathVariable(value = "id") long id, @RequestParam String place1, @RequestParam String place2, @RequestParam Float place3, Model model) {
         Goods post = goodsRepository.findById(id).orElseThrow();
         post.setName(place1);
         post.setAbout(place2);
         post.setPrice(place3);
         goodsRepository.save(post);
-        return "redirect:/products";
+        return "redirect:/";
     }
 
-    @PostMapping("/products/{id}/remove")
+    @PostMapping("/{id}/remove")
     public String postRemove (@PathVariable(value = "id") long id, Model model) {
         Goods post = goodsRepository.findById(id).orElseThrow();
         goodsRepository.delete(post);
-        return "redirect:/products";
+        return "redirect:/";
     }
 
 }
