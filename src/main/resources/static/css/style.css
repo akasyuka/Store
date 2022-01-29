@@ -23,3 +23,6 @@
     float: left;
     padding: 25px;
 }
+.price {
+    text-align: right;
+}
