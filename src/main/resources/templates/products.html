@@ -9,9 +9,9 @@
 <body>
     <header th:insert="blocks/header :: header"></header>
 
-    <div style="margin:0 auto; max-width:1100px;">
+    <div class="content">
         <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" alt="" width="1100px" height="300px"/>
-        <aside style="margin-top: 25px; word-wrap: break-word; width:200px; height:900px; float:left;">
+        <div class="content-sidebar">
             Аёу, АК`а, вот вам два колпака
             Чтоб наверняка, больше кофе меньше молока
             Это Гуфака, меньше вальса больше гопака
@@ -27,14 +27,14 @@
             Нас это радует, вам это нравится тоже
             Хлопайте в ладоши для Вити, Максима и Лёши
             Автомат Калашникова так и ебошит
-        </aside>
-        <main th:each="el : ${goods}" style="float:left; padding:25px;">
+        </div>
+        <div class="content-main" th:each="el : ${goods}">
             <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" alt="" width="250px" height="250px"/>
             <h3 th:text="${el.name}"/>
             <p th:text="${el.about}"/>
             <p th:text="${el.price}"/>
             <a th:href="'/products/' + ${el.id}" class="btn btn-info">Детальнее</a>
-        </main>
+        </div>
     </div>
 
 
