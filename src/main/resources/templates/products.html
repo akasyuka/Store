@@ -14,7 +14,7 @@
     </p>
     <div class="content">
         <div class="content-block" th:each="el : ${goods}">
-            <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" alt="" width="250px" height="250px"/>
+            <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" alt="" width="200px" height="200px"/>
             <h4 th:text="${el.name}"></h4>
             <p class="price" th:text="${el.price}"/>
             <a th:href="'/' + ${el.id}" class="btn btn-info">Детальнее</a>
