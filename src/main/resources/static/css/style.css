@@ -1,28 +1,40 @@
 .header {
-    background-color: #969696;
-    padding: 25px 0px;
-    margin-bottom:25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+.header div {
+    margin: 0px 10px;
+}
+.header a {
+    text-decoration: none;
 }
 .footer {
-    clear: both;
-    background-color: #969696;
+    text-align: center;
     padding: 50px 0px;
 }
+.footer ul {
+    list-style: none;
+}
+.footer li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.footer a {
+    text-decoration: none;
+}
+.logo-center {
+    text-align: center;
+}
 .content {
-     margin: 0 auto;
-     max-width: 1100px;
+    max-width: 765px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-block {
+    display: inline-block;
+    justify-content: center;
  }
-.content-sidebar {
-    margin-top: 25px;
-    word-wrap: break-word;
-    width: 200px;
-    height:900px;
-    float:left;
-}
-.content-main {
-    float: left;
-    padding: 25px;
-}
 .price {
     text-align: right;
 }
