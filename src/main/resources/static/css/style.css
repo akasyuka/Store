@@ -26,6 +26,10 @@
 .logo-center {
     text-align: center;
 }
+.logo-center img {
+    width: 80%;
+    height: 100px;
+}
 .content {
     text-align: center;
 }
