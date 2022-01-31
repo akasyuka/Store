@@ -1,9 +1,14 @@
 .header {
+    margin: 0px 100px;
     background-color: #e6edfb;
     margin-bottom: 25px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 10px 0;
+}
+.header-right {
+    display: flex;
+    justify-content: flex-end;
 }
 .header div {
     margin: 0px 10px;
