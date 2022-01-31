@@ -35,6 +35,23 @@
 }
 .content-block {
     display: inline-block;
- }
+}
+.cookie {
+    padding: 0px 100px;
+    background-color: grey;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.cookie-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+@media screen and (max-width: 500px) {
+    .content {
+        display: none;
+    }
+}
 
 

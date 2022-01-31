@@ -9,17 +9,30 @@
 </head>
 <body>
     <header th:insert="blocks/header :: header"></header>
+    <main>
     <p class="logo-center">
-        <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" alt=""/>
+        <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}"/>
     </p>
     <div class="content">
         <div class="content-block" th:each="el : ${goods}">
-            <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" alt="" width="481px" height="481px"/>
+            <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" width="481px" height="481px"/>
             <h4 th:text="${el.name}"></h4>
             <p class="price" th:text="${el.price}"/>
             <a th:href="'/' + ${el.id}" class="btn btn-info">Детальнее</a>
         </div>
     </div>
+    </main>
     <footer th:insert="blocks/footer :: footer"></footer>
+    <div class="cookie">
+        <div><p>Нажимая Ок вы соглашаетесь с "<a href="#">Политика конфиденциальности</a>"</p></div>
+        <div class="cookie-btn">
+            <div>
+                <button class="btn btn-primary"><p>Ок</p></button>
+            </div>
+            <div>
+                <button class="btn btn-danger"><p>Покинуть сайт</p></button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
