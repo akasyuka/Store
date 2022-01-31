@@ -55,6 +55,9 @@
 .cookie p {
     color: white;
 }
+.cookie-btn p {
+    color: black;
+}
 .cookie-btn {
     display: flex;
     justify-content: flex-end;
