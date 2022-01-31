@@ -1,7 +1,9 @@
 .header {
+    background-color: #e6edfb;
     margin-bottom: 25px;
     display: flex;
     justify-content: flex-end;
+    padding: 10px 0;
 }
 .header div {
     margin: 0px 10px;
@@ -10,8 +12,9 @@
     text-decoration: none;
 }
 .footer {
+    background-color: #e6edfb;
     text-align: center;
-    padding: 50px 0px;
+    padding: 25px 0px;
 }
 .footer ul {
     list-style: none;
@@ -38,11 +41,14 @@
 }
 .cookie {
     padding: 0px 100px;
-    background-color: grey;
+    background-color: #002882;
     position: sticky;
     bottom: 0;
     display: flex;
     justify-content: space-between;
+}
+.cookie p {
+    color: white;
 }
 .cookie-btn {
     display: flex;
