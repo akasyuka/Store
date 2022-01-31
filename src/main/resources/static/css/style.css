@@ -35,8 +35,9 @@
     text-align: center;
 }
 .logo-center img {
-    width: 80%;
-    height: 100px;
+    width: 600px;
+    height: 200px;
+    border-radius: 50px;
 }
 .content {
     text-align: center;
@@ -55,6 +56,9 @@
 .cookie p {
     color: white;
 }
+.cookie a {
+    color: white;
+}
 .cookie-btn p {
     color: black;
 }
@@ -62,8 +66,8 @@
     display: flex;
     justify-content: flex-end;
 }
-@media screen and (max-width: 500px) {
-    .content {
+@media screen and (max-width: 650px) {
+    .logo-center {
         display: none;
     }
 }
