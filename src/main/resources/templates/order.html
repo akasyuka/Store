@@ -7,12 +7,57 @@
 </head>
 <body>
     <main>
-        <label for="name">Введите имя и фамилию</label>
-        <input type="text" id="name" placeholder="Имя и фамилия"><br>
-        <label for="tel">Введите номер телефона</label>
-        <input type="text" id="tel" placeholder="Ваш телефон +..."><br>
-        <label for="email">Введите адрес эл. почты</label>
-        <input type="email" id="email" placeholder="login@domain.name"><br>
+        <h1>Оформление заказа</h1>
+        <div>
+            <h2>Контактные данные</h2>
+            <label for="name">Введите имя и фамилию</label>
+            <input type="text" id="name" placeholder="Имя и фамилия"><br>
+            <label for="tel">Введите номер телефона</label>
+            <input type="text" id="tel" placeholder="Ваш телефон +..."><br>
+            <label for="email">Введите адрес эл. почты</label>
+            <input type="email" id="email" placeholder="login@domain.name"><br>
+        </div>
+        <div>
+            <h2>Доставка</h2>
+            <p>Выберите страну</p>
+            <select>
+                <option value="Russia">Россия</option>
+                <option value="USA">США</option>
+            </select>
+        </div>
+        <div>
+            <h2>Оплата</h2>
+            <div>
+                <input type="radio" id="take">
+                <label for="take">При получении</label>
+            </div>
+            <div>
+                <input type="radio" id="card">
+                <label for="card">Банковская карта</label>
+            </div>
+            <div>
+                <input type="radio" id="qiwi">
+                <label for="qiwi">Qiwi кошелек</label>
+            </div>
+        </div>
+        <div>
+            <h2>Политика возврата</h2>
+            <p>Ознакомлен</p>
+            <div>
+                <input type="checkbox" id="yes">
+                <label for="yes">Да</label>
+            </div>
+<!--            <div>-->
+<!--                <input type="checkbox" id="no">-->
+<!--                <label for="no">Нет</label>-->
+<!--            </div>-->
+        </div>
+        <div>
+            <h2>Комментарий</h2>
+            <textarea></textarea>
+        </div>
+
     </main>
+
 </body>
 </html>

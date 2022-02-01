@@ -2,5 +2,11 @@ main {
     margin:0 100px;
 }
 input[type='text'], input[type='email'], label {
-    font-size: 30px;
+    font-size: 24px;
+}
+p {
+    font-size: 24px;
+}
+select {
+    font-size: 24px;
 }
