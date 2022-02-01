@@ -1,0 +1,6 @@
+main {
+    margin:0 100px;
+}
+input[type='text'], input[type='email'], label {
+    font-size: 30px;
+}
