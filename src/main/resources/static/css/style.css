@@ -87,7 +87,10 @@
     }
     .content-block {
         display: inline-block;
-        width: 150px;
+        width: 204px;
+    }
+    .header {
+        height: 120px;
     }
 }
 
