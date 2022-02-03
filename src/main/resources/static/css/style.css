@@ -1,17 +1,24 @@
 .header {
     font-size: 24px;
 }
+.header-left a {
+    color: black;
+}
+.header-right a {
+    color: black;
+}
 .header-left {
-    background-color: #e6edfb;
+    background-color: #d4cbc0;
     padding: 20px;
     border-radius: 32px;
     border: 2px;
     top: 30px;
     left: 30px;
     position: fixed;
+    color: black;
 }
 .header-right {
-    background-color: #e6edfb;
+    background-color: #d4cbc0;
     padding: 20px;
     border-radius: 32px;
     border: 2px;
@@ -23,7 +30,7 @@
     text-decoration: none;
 }
 .footer {
-    background-color: #e6edfb;
+    background-color: #d4cbc0;
     text-align: center;
     padding: 10px 0px;
 }
