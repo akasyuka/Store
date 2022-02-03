@@ -50,6 +50,7 @@
     margin: 0 auto;
 }
 .content-block {
+    width: 320px;
     display: inline-block;
 }
 .content-item {
@@ -80,9 +81,13 @@
     display: flex;
     justify-content: flex-end;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 670px) {
     .logo-center {
         display: none;
+    }
+    .content-block {
+        display: inline-block;
+        width: 150px;
     }
 }
 
