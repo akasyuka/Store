@@ -1,27 +1,21 @@
- body {
-    font-size: 30px;
-}
-input {
-    font-size: 30px;
-}
-button p {
-    font-size: 30px;
-}
-
 .header {
-    margin: 0px 100px;
-    background-color: #e6edfb;
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    margin: 10px 200px 0px;
+    font-size: 24px;
 
 }
-.header-right {
-    display: flex;
-    justify-content: flex-end;
+.header-left {
+    background-color: #e6edfb;
+    padding: 20px;
+    border-radius 5px;
+    border: 2px;
 }
-.header div {
-    margin: 0px 10px;
+.header-right {
+    background-color: #e6edfb;
+    padding: 20px;
+    border-radius 5px;
+    border: 2px;
 }
 .header a {
     text-decoration: none;

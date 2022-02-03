@@ -1,12 +1,12 @@
 main {
     margin:0 100px;
 }
-input[type='text'], input[type='email'], label {
-    font-size: 24px;
-}
-p {
-    font-size: 24px;
-}
-select {
-    font-size: 24px;
+textarea {
+    width: 405px; /* Ширина поля в процентах */
+    height: 100px; /* Высота поля в пикселах */
+    resize: none; /* Запрещаем изменять размер */
+   }
+label {
+    display: inline-block;
+    width: 200px;
 }
