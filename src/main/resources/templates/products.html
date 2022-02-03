@@ -36,9 +36,9 @@
     <header th:insert="blocks/header :: header"></header>
     <main>
 <!--        <button onclick="myFunction()">Try it</button>-->
-        <p class="logo-center">
-            <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}"/>
-        </p>
+        <div class="logo-center">
+            <img src="img/logo.gif" alt="Гифка"/>
+        </div>
         <div class="content">
             <div class="content-block" th:each="el : ${goods}">
                 <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" width="100%" height="100%"/>
@@ -46,6 +46,7 @@
                 <div class="content-item">
                     <div><p th:text="${el.price}"/></div>
                     <div><a th:href="'/' + ${el.id}">Детальнее</a></div>
+                </div>
             </div>
         </div>
     </main>

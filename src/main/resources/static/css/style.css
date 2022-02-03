@@ -39,11 +39,10 @@
 }
 .logo-center {
     text-align: center;
+    height: 200px;
 }
 .logo-center img {
-    width: 600px;
-    height: 200px;
-    border-radius: 50px;
+    height: 100%;
 }
 .content {
     max-width: 980px;
@@ -82,9 +81,7 @@
     justify-content: flex-end;
 }
 @media screen and (max-width: 670px) {
-    .logo-center {
-        display: none;
-    }
+
     .content-block {
         display: inline-block;
         width: 204px;
