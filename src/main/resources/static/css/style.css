@@ -1,21 +1,23 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 200px 0px;
     font-size: 24px;
-
 }
 .header-left {
     background-color: #e6edfb;
     padding: 20px;
-    border-radius 5px;
+    border-radius: 32px;
     border: 2px;
+    top: 30px;
+    left: 30px;
+    position: fixed;
 }
 .header-right {
     background-color: #e6edfb;
     padding: 20px;
-    border-radius 5px;
+    border-radius: 32px;
     border: 2px;
+    top: 30px;
+    right: 30px;
+    position: fixed;
 }
 .header a {
     text-decoration: none;
