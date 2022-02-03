@@ -43,7 +43,7 @@
             </p>
 
     <div class="content">
-        <div class="content_block" th:each="el : ${goods}">
+        <div class="content-block" th:each="el : ${goods}">
             <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" width="481px" height="481px"/>
             <h4 th:text="${el.name}"></h4>
             <p class="price" th:text="${el.price}"/>
@@ -54,7 +54,7 @@
     <footer th:insert="blocks/footer :: footer"></footer>
     <div class="cookie">
         <div>Нажимая Ок вы соглашаетесь с "<a href="#">Политика конфиденциальности</a>"</div>
-        <div class="cookie_btn">
+        <div class="cookie-btn">
             <div>
                 <input type="button" value="Ок">
             </div>

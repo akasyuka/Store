@@ -52,7 +52,7 @@ button p {
 .content {
     text-align: center;
 }
-.content_block {
+.content-block {
     display: inline-block;
 }
 .cookie {
@@ -67,10 +67,10 @@ button p {
 .cookie a {
     color: white;
 }
-.cookie_btn p {
+.cookie-btn p {
     color: black;
 }
-.cookie_btn {
+.cookie-btn {
     display: flex;
     justify-content: flex-end;
 }
