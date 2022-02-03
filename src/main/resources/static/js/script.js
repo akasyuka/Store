@@ -1,7 +1,3 @@
-function name() {
-alert('Hello!');
-} 
-window.onload function() {
-let btn = document.getElementById("alert");
-btn.onclick = name();
-}
+function myFunction() {
+      alert("I am an alert box!");
+    }
