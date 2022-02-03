@@ -1,7 +1,7 @@
 function name() {
-alert="Hello!";
+alert('Hello!');
 } 
 window.onload function() {
 let btn = document.getElementById("alert");
-btn.onclick = name;
-};
+btn.onclick = name();
+}
