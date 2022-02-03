@@ -19,9 +19,13 @@
 <body>
     <header th:insert="blocks/header :: header"></header>
     <main>
-    <p class="logo-center">
-        <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}"/>
-    </p>
+        <button id="alert">
+            do
+        </button>
+            <p class="logo-center">
+                <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}"/>
+            </p>
+
     <div class="content">
         <div class="content-block" th:each="el : ${goods}">
             <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" width="481px" height="481px"/>
