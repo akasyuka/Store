@@ -11,7 +11,7 @@
     background-color: #d4cbc0;
     padding: 20px;
     border-radius: 32px;
-    border: 2px;
+    border: 1px solid black;
     top: 30px;
     left: 30px;
     position: fixed;
@@ -21,7 +21,7 @@
     background-color: #d4cbc0;
     padding: 20px;
     border-radius: 32px;
-    border: 2px;
+    border: 1px solid black;
     top: 30px;
     right: 30px;
     position: fixed;
