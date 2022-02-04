@@ -46,16 +46,23 @@
 
         <div class="content">
             <hr>
-            <h1>ДОБРО ПОЖАЛОВАТЬ</h1>
+            <h2>ДОБРО ПОЖАЛОВАТЬ</h2>
             <hr>
             <div class="content-block" th:each="el : ${goods}">
                 <img th:src="@{https://cdn.statically.io/gh/akasyuka/Spring/c529dd8f/src/main/resources/static/img/img1.jpg}" width="100%" height="100%"/>
                 <p th:text="${el.name}"></p>
                 <div class="content-item">
                     <div><p th:text="${el.price}"/></div>
-                    <div><a th:href="'/' + ${el.id}">Детальнее</a></div>
+                    <div><a th:href="'/' + ${el.id}"><b>ДЕТАЛЬНЕЕ</b></a></div>
                 </div>
             </div>
+        </div>
+        <div class="address">
+            <h3>САМОВЫВОЗ:</h3>
+            Г. Уфа, ул. Мира 8, кв. 7<br>
+            Понедельник-пятница: 15:00-21:00<br>
+            Суббота: 16:00-21:00<br>
+            *работаем в тестовом режиме<br>
         </div>
     </main>
     <footer th:insert="blocks/footer :: footer"></footer>

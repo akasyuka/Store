@@ -1,5 +1,4 @@
 .header {
-    font-size: 20px;
 }
 .header-left a {
     color: black;
@@ -9,8 +8,8 @@
 }
 .header-left {
     background-color: #d4cbc0;
-    padding: 20px;
-    border-radius: 32px;
+    padding: 15px;
+    border-radius: 23px;
     border: 1px solid black;
     top: 30px;
     left: 30px;
@@ -19,8 +18,8 @@
 }
 .header-right {
     background-color: #d4cbc0;
-    padding: 20px;
-    border-radius: 32px;
+    padding: 15px;
+    border-radius: 23px;
     border: 1px solid black;
     top: 30px;
     right: 30px;
@@ -43,6 +42,7 @@
 }
 .footer a {
     text-decoration: none;
+    color: black;
 }
 .logo-center {
     text-align: center;
@@ -55,21 +55,36 @@
     max-width: 980px;
     margin: 0 auto;
 }
-.content h1 {
+.content h2 {
     text-align: center;
 }
 .content-block {
     width: 320px;
     display: inline-block;
+    margin-bottom: 30px;
+}
+.content-block p {
+    padding: 0;
+    margin: 0 0 10px 0;
 }
 .content-item {
-    margin: 0 10px;
+    margin: 0 30px 0 0;
     display: flex;
     justify-content: space-between;
+
 }
 .content-item p {
     margin-top: 0px;
     padding-top 0px;
+    padding: 0px;
+}
+.content-item a {
+    text-decoration: none;
+    color: black;
+}
+.address {
+    text-align: center;
+    margin-bottom: 30px;
 }
 .cookie {
     padding: 10px 100px;
