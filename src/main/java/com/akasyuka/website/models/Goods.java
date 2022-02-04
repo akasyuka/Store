@@ -14,7 +14,6 @@ public class Goods {
 
     private String name, about;
     private Float price;
-//    private int views;
 
     public Goods(String name, String about, Float price) {
         this.name = name;
