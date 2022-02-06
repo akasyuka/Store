@@ -13,8 +13,8 @@
     <div th:each="el : ${goods}">
       <h3 th:text="${el.name}"/>
       <p th:text="${el.about}"/>
-      <a th:href="'/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a>
-      <form th:action="'/' + ${el.id} + '/remove'" method="post">
+      <a th:href="'/products/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a>
+      <form th:action="'/products/' + ${el.id} + '/remove'" method="post">
         <button class="btn btn-danger" type="submit">Удалить</button>
       </form>
     </div>
