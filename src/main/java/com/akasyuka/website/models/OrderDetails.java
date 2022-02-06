@@ -10,7 +10,7 @@ public class OrderDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long detailsId;
-
+//Разобраться!
     private Long detailsOrderId;
     private Long detailGoodsId;
 

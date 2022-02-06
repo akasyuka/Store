@@ -2,6 +2,7 @@ package com.akasyuka.website.controllers;
 
 import com.akasyuka.website.models.Goods;
 import com.akasyuka.website.repositories.GoodsRepository;
+import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Optional;
 
 @Controller
@@ -61,5 +63,22 @@ public class ProductsController {
         goodsRepository.delete(post);
         return "redirect:/";
     }
+
+
+//    @PostMapping("/")
+//    public String find (@RequestParam String name, Map<String, Object> model) {
+//        ArrayList<Goods> names = goodsRepository.findByPrice(name);
+//        model.put("names", names);
+//        return "products";
+//    }
+//    <form th:action="'/'" method="POST" action="find">
+//                <input type="text" th:value="${el.name} name="find">
+//                <button type="submit">Найти</button>
+//            </form>
+//            <div th:each="el : ${prices}">
+//                <h3 th:text="${el.name}"/>
+//                <p th:text="${el.about}"/>
+//            </div>
+
 
 }
