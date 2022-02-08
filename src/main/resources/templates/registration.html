@@ -5,9 +5,9 @@
     <title>Spring Security Example </title>
 </head>
 <body>
-Login page
-<a href="/registration">Registration</a>
-<form th:action="@{/login}" method="post">
+Add new user
+<!--Message пользователь существует-->
+<form th:action="@{/registration}" method="post">
     <div><label> User Name : <input type="text" name="username"/> </label></div>
     <div><label> Password: <input type="password" name="password"/> </label></div>
     <div><input type="submit" value="Sign In"/></div>
