@@ -1,4 +1,4 @@
-package com.akasyuka.website.models;
+package com.akasyuka.website.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,8 +1,8 @@
-package com.akasyuka.website.controllers;
+package com.akasyuka.website.controller;
 
-import com.akasyuka.website.models.Role;
-import com.akasyuka.website.models.User;
-import com.akasyuka.website.repositories.UserRepository;
+import com.akasyuka.website.entity.Role;
+import com.akasyuka.website.entity.User;
+import com.akasyuka.website.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

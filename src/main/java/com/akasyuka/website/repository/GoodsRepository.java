@@ -1,6 +1,6 @@
-package com.akasyuka.website.repositories;
+package com.akasyuka.website.repository;
 
-import com.akasyuka.website.models.Goods;
+import com.akasyuka.website.entity.Goods;
 import org.springframework.data.repository.CrudRepository;
 
 public interface GoodsRepository extends CrudRepository<Goods, Long> {

@@ -1,8 +1,7 @@
-package com.akasyuka.website.controllers;
+package com.akasyuka.website.controller;
 
-import com.akasyuka.website.models.Goods;
-import com.akasyuka.website.repositories.GoodsRepository;
-import org.hibernate.mapping.List;
+import com.akasyuka.website.entity.Goods;
+import com.akasyuka.website.repository.GoodsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Optional;
 
 @Controller
