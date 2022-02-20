@@ -25,7 +25,7 @@ public class ProductsController {
 
 
     @GetMapping("/")
-    public String products (Model model) {
+    public String products(Model model) {
         model.addAttribute("title", "Главная ");
         Iterable<Goods> allGoods = goodsRepository.findAll();
         model.addAttribute("goods", allGoods);
@@ -33,7 +33,7 @@ public class ProductsController {
     }
 
     @GetMapping("/products/{id}")
-    public String productId (@PathVariable(value = "id") long id, Model model) {
+    public String productId(@PathVariable(value = "id") long id, Model model) {
 //        Optional<Goods> goods = goodsRepository.findById(id);
 //        ArrayList<Goods> res = new ArrayList<>();
 //        goods.ifPresent(res::add);
@@ -44,9 +44,8 @@ public class ProductsController {
         return "productsId";
     }
 
-
     @GetMapping("/products/{id}/edit")
-    public String productIdEdit (@PathVariable(value = "id") long id, Model model) {
+    public String productIdEdit(@PathVariable(value = "id") long id, Model model) {
         Optional<Goods> goods = goodsRepository.findById(id);
         ArrayList<Goods> res = new ArrayList<>();
         goods.ifPresent(res::add);
@@ -55,7 +54,7 @@ public class ProductsController {
     }
 
     @PostMapping("/products/{id}/edit")
-    public String postEdit (@PathVariable(value = "id") long id, @RequestParam String place1, @RequestParam String place2, @RequestParam Float place3, Model model) {
+    public String postEdit(@PathVariable(value = "id") long id, @RequestParam String place1, @RequestParam String place2, @RequestParam Float place3, Model model) {
         Goods post = goodsRepository.findById(id).orElseThrow();
         post.setName(place1);
         post.setAbout(place2);
@@ -65,13 +64,11 @@ public class ProductsController {
     }
 
     @PostMapping("/products/{id}/remove")
-    public String postRemove (@PathVariable(value = "id") long id, Model model) {
+    public String postRemove(@PathVariable(value = "id") long id, Model model) {
         Goods post = goodsRepository.findById(id).orElseThrow();
         goodsRepository.delete(post);
         return "redirect:/";
     }
-
-
 //    @PostMapping("/")
 //    public String find (@RequestParam String name, Map<String, Object> model) {
 //        ArrayList<Goods> names = goodsRepository.findByPrice(name);
@@ -86,6 +83,4 @@ public class ProductsController {
 //                <h3 th:text="${el.name}"/>
 //                <p th:text="${el.about}"/>
 //            </div>
-
-
 }
