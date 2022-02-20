@@ -2,6 +2,7 @@ package com.akasyuka.website.controller;
 
 import com.akasyuka.website.entity.Goods;
 import com.akasyuka.website.repository.GoodsRepository;
+import com.akasyuka.website.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +20,10 @@ public class ProductsController {
     @Autowired
     private GoodsRepository goodsRepository;
 
+    @Autowired
+    private GoodsService goodsService;
+
+
     @GetMapping("/")
     public String products (Model model) {
         model.addAttribute("title", "Главная ");
@@ -29,10 +34,13 @@ public class ProductsController {
 
     @GetMapping("/products/{id}")
     public String productId (@PathVariable(value = "id") long id, Model model) {
-        Optional<Goods> goods = goodsRepository.findById(id);
-        ArrayList<Goods> res = new ArrayList<>();
-        goods.ifPresent(res::add);
+//        Optional<Goods> goods = goodsRepository.findById(id);
+//        ArrayList<Goods> res = new ArrayList<>();
+//        goods.ifPresent(res::add);
+//        model.addAttribute("goods", res);
+        Goods res = goodsService.findById(id);
         model.addAttribute("goods", res);
+
         return "productsId";
     }
 
