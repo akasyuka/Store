@@ -44,6 +44,7 @@ public class ProductsController {
         return "productsId";
     }
 
+
     @GetMapping("/products/{id}/edit")
     public String productIdEdit (@PathVariable(value = "id") long id, Model model) {
         Optional<Goods> goods = goodsRepository.findById(id);
