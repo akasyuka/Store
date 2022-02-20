@@ -115,15 +115,41 @@
     display: flex;
     justify-content: flex-end;
 }
+@media screen and (max-width: 980px) {
+    .content {
+        max-width: 646px;
+        margin: 0 auto;
+    }
+}
 @media screen and (max-width: 670px) {
 
+    .content {
+        max-width: 404px;
+        margin: 0 auto;
+    }
     .content-block {
         display: inline-block;
-        width: 204px;
+        width: 200px;
     }
     .header {
         height: 120px;
     }
 }
+@media screen and (max-width: 430px) {
+
+    .content {
+        max-width: 204px;
+        margin: 0 auto;
+    }
+    .content-block {
+        display: inline-block;
+        width: 200px;
+    }
+    .header {
+        height: 120px;
+    }
+}
+
+
 
 
