@@ -32,7 +32,6 @@ public class ProductsController {
         return "products";
     }
 
-
     @GetMapping("/products/{id}")
     public String productId (@PathVariable(value = "id") long id, Model model) {
 //        Optional<Goods> goods = goodsRepository.findById(id);
