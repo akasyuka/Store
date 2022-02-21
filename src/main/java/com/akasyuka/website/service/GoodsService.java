@@ -1,8 +1,8 @@
 package com.akasyuka.website.service;
 
-import com.akasyuka.website.entity.Goods;
+import com.akasyuka.website.entity.Product;
 
 
 public interface GoodsService {
-    Goods findById(Long id);
+    Product findById(Long id);
 }
