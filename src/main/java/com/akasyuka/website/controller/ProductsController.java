@@ -28,7 +28,7 @@ public class ProductsController {
     public String products(Model model) {
         model.addAttribute("title", "Главная ");
         Iterable<Product> products = productRepository.findAll();
-        model.addAttribute("goods", products);
+        model.addAttribute("products", products);
         return "products";
     }
 
