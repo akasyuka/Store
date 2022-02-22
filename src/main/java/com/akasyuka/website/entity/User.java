@@ -14,7 +14,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
 
-    private String username;
+    private String userName;
 
     private String userLastName;
     private boolean userActive;
@@ -45,12 +45,12 @@ public class User {
     private String userAddress2;
 
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String username) {
+        this.userName = username;
     }
 
     public String getUserLastName() {
