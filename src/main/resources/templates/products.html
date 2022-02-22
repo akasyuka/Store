@@ -50,10 +50,10 @@
             <hr>
             <div class="content-block" th:each="el : ${goods}">
                 <img th:src="@{https://cdn.statically.io/gh/akasyuka/Store/13b72b7f/src/main/resources/static/img/img1.jpg}" width="100%" height="100%"/>
-                <p th:text="${el.name}"></p>
+                <p th:text="${el.productName}"></p>
                 <div class="content-item">
-                    <div><p th:text="${el.price}"/></div>
-                    <div><a th:href="'/products/' + ${el.id}"><b>ДЕТАЛЬНЕЕ</b></a></div>
+                    <div><p th:text="${el.productPrice}"/></div>
+                    <div><a th:href="'/products/' + ${el.productId}"><b>ДЕТАЛЬНЕЕ</b></a></div>
                 </div>
             </div>
         </div>
