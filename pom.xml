@@ -56,7 +56,14 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-<!--		Подключаем Spring Security-->
+		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+<!--		<dependency>-->
+<!--			<groupId>org.flywaydb</groupId>-->
+<!--			<artifactId>flyway-core</artifactId>-->
+<!--			<version>8.5.0</version>-->
+<!--		</dependency>-->
+
+<!--				Подключаем Spring Security-->
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
@@ -87,6 +94,19 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>5.2.4</version>
+				<configuration>
+					<url>jdbc:mysql://localhost:3306/db_store</url>
+					<user>root</user>
+					<password>root</password>
+<!--					<schemas>-->
+<!--						<schema>db_store</schema>-->
+<!--					</schemas>-->
 				</configuration>
 			</plugin>
 		</plugins>
