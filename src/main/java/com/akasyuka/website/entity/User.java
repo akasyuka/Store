@@ -19,9 +19,9 @@ public class User {
     private boolean userActive;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "roles", joinColumns = @JoinColumn(name = "role_id"))
+    @CollectionTable(name = "roles", joinColumns = @JoinColumn(name = "role_user_id"))
     @Enumerated(EnumType.STRING)
-    private Set<Role> userRole;
+    private Set<Role> roleName;
 
     private String userEmail;
     private String userPassword;
@@ -43,13 +43,6 @@ public class User {
     private String userAddress;
     private String userAddress2;
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
 
     public String getUserName() {
         return userName;
@@ -75,12 +68,20 @@ public class User {
         this.userActive = userActive;
     }
 
-    public Set<Role> getUserRole() {
-        return userRole;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUserRole(Set<Role> userRole) {
-        this.userRole = userRole;
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Set<Role> getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(Set<Role> roleName) {
+        this.roleName = roleName;
     }
 
     public String getUserEmail() {

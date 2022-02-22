@@ -1,6 +1,5 @@
 package com.akasyuka.website.controller;
 
-//import com.akasyuka.website.entity.Role;
 import com.akasyuka.website.entity.Role;
 import com.akasyuka.website.entity.User;
 import com.akasyuka.website.repository.UserRepository;
@@ -32,7 +31,7 @@ public class RegistrationController {
             return "registration";
         }
         user.setUserActive(true);
-        user.setUserRole(Collections.singleton(Role.USER));
+        user.setRoleName(Collections.singleton(Role.USER));
         userRepository.save(user);
         return "redirect:/login";
     }
