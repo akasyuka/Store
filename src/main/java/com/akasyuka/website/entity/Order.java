@@ -58,4 +58,7 @@ public class Order {
         this.orderShipped = orderShipped;
         this.orderTrackingNumber = orderTrackingNumber;
     }
+
+    public Order() {
+    }
 }

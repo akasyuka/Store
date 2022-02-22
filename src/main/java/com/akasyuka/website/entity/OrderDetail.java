@@ -33,4 +33,7 @@ public class OrderDetail {
         this.detailSKU = detailSKU;
         this.detailQuantity = detailQuantity;
     }
+
+    public OrderDetail() {
+    }
 }

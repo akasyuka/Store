@@ -16,4 +16,7 @@ public class ProductCategory {
         this.categoryId = categoryId;
         this.categoryName = categoryName;
     }
+
+    public ProductCategory() {
+    }
 }

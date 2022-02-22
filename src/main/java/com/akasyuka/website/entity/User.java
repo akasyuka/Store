@@ -53,4 +53,7 @@ public class User {
         this.userAddress = userAddress;
         this.userAddress2 = userAddress2;
     }
+
+    public User() {
+    }
 }

@@ -36,6 +36,9 @@ public class Product {
     private Integer productUnlimited;
     private String productLocation;
 
+    public Product() {
+    }
+
     public Product(Long productId, String productSKU, String productName, Float productPrice, Float productWeight, String productCartDesc, String productShortDesc, String productLongDesc, String productThumb, String productImage, ProductCategory productCategory, Date productUpdateDate, Float productStock, Integer productLive, Integer productUnlimited, String productLocation) {
         this.productId = productId;
         this.productSKU = productSKU;
