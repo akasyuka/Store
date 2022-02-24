@@ -1,8 +1,8 @@
 package com.akasyuka.website.controller;
 
-import com.akasyuka.website.entity.Goods;
-import com.akasyuka.website.repository.GoodsRepository;
-import com.akasyuka.website.service.GoodsService;
+import com.akasyuka.website.entity.Product;
+import com.akasyuka.website.repository.ProductRepository;
+import com.akasyuka.website.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,55 +18,55 @@ import java.util.Optional;
 public class ProductsController {
 
     @Autowired
-    private GoodsRepository goodsRepository;
+    private ProductRepository productRepository;
 
-    @Autowired
-    private GoodsService goodsService;
+//    @Autowired
+//    private ProductService productService;
 
 
     @GetMapping("/")
     public String products(Model model) {
         model.addAttribute("title", "Главная ");
-        Iterable<Goods> allGoods = goodsRepository.findAll();
-        model.addAttribute("goods", allGoods);
+        Iterable<Product> products = productRepository.findAll();
+        model.addAttribute("products", products);
         return "products";
     }
 
     @GetMapping("/products/{id}")
     public String productId(@PathVariable(value = "id") long id, Model model) {
-//        Optional<Goods> goods = goodsRepository.findById(id);
-//        ArrayList<Goods> res = new ArrayList<>();
-//        goods.ifPresent(res::add);
-//        model.addAttribute("goods", res);
-        Goods res = goodsService.findById(id);
+        Optional<Product> products = productRepository.findById(id);
+        ArrayList<Product> res = new ArrayList<>();
+        products.ifPresent(res::add);
         model.addAttribute("goods", res);
+//        Product res = goodsService.findById(id);
+//        model.addAttribute("goods", res);
 
         return "productsId";
     }
 
     @GetMapping("/products/{id}/edit")
     public String productIdEdit(@PathVariable(value = "id") long id, Model model) {
-        Optional<Goods> goods = goodsRepository.findById(id);
-        ArrayList<Goods> res = new ArrayList<>();
-        goods.ifPresent(res::add);
+        Optional<Product> products = productRepository.findById(id);
+        ArrayList<Product> res = new ArrayList<>();
+        products.ifPresent(res::add);
         model.addAttribute("goods", res);
         return "productsIdEdit";
     }
 
     @PostMapping("/products/{id}/edit")
     public String postEdit(@PathVariable(value = "id") long id, @RequestParam String place1, @RequestParam String place2, @RequestParam Float place3, Model model) {
-        Goods post = goodsRepository.findById(id).orElseThrow();
-        post.setName(place1);
-        post.setAbout(place2);
-        post.setPrice(place3);
-        goodsRepository.save(post);
+        Product post = productRepository.findById(id).orElseThrow();
+        post.setProductName(place1);
+        post.setProductCartDesc(place2);
+        post.setProductPrice(place3);
+        productRepository.save(post);
         return "redirect:/";
     }
 
     @PostMapping("/products/{id}/remove")
     public String postRemove(@PathVariable(value = "id") long id, Model model) {
-        Goods post = goodsRepository.findById(id).orElseThrow();
-        goodsRepository.delete(post);
+        Product post = productRepository.findById(id).orElseThrow();
+        productRepository.delete(post);
         return "redirect:/";
     }
 //    @PostMapping("/")

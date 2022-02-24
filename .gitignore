@@ -31,5 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+/db/db_heroku.txt
 db_tea.sql
 Этапы.txt
