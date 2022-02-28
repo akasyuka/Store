@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @RestController
@@ -22,17 +23,23 @@ public class CartController {
         goods.add(goodName);
         return true;
     }
-//    @GetMapping("/cart/delete/{goodName}")
-//    public boolean deleteGood()
-//
-//    Оплатить корзину
+    @GetMapping("/cart/delete/{goodName}")
+    public boolean deleteGood(@PathVariable(value = "goodName") String goodName) {
+        goods.remove(goodName);
+        return true;
+    }
+    @GetMapping("/cart/checkout")
+    public boolean checkoutGoods() {
+        goods.clear();
+        return true;
+    }
+}
 
 
 //1. Добавить методы удалить, оплатить
 //2. Сделать рестфул: PutMapping, DeleteMapping
-//3. Реализовать таблицу в которую я буду сохранять товары   entity, repositoy
-//4. Список товаров(пользователь должен видеть) которые есть и только их мы можем добавлять(спросить в другой таблице)
-//     !
-//
+//3. Реализовать таблицу в которую я буду сохранять товары   entity, repository
+//4. Список товаров(пользователь должен видеть) которые есть
+//   и только их мы можем добавлять(спросить в другой таблице)
 
-}
+
